@@ -1,4 +1,4 @@
-//here we are making custom react query method
+//here we are making custom react query method/ hook
 import { useState, useEffect } from "react";
 import axios from "axios";
 
