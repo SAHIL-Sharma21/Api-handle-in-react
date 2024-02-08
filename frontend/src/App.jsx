@@ -34,18 +34,23 @@ function App() {
 const {products, loading, error} = customReactQuery('/api/products');
 
 //handling error
-if(error) {
- return <h1>Something went wrong!!</h1>
-}
+// if(error) {
+//  return <h1>Something went wrong!!</h1>
+// }
 
-// handlling loading
-if(loading) {
-  return <h1>Loading....</h1>
-}
+// // handlling loading
+// if(loading) {
+//   return <h1>Loading....</h1>
+// }
 
   //defining handledata functionality
   return (
     <>
+    {/* condtional rending  */}
+      {loading && <h1>Loading... </h1>}
+      {error && <h1>Something went wrong.</h1>}
+
+      
       <h1>Handling api in react </h1>
       <h2>total number of products: {products.length}</h2>
 
