@@ -4,6 +4,7 @@ import axios from "axios";
 
 const customReactQuery = (path) => {
 
+
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -23,7 +24,7 @@ const customReactQuery = (path) => {
             }
         })();
 
-    }, []);
+    }, [search]);
     return { products, error, loading }
 }
 
